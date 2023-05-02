@@ -1,0 +1,10 @@
+MyFunc deviation: 1.0954784748787112
+Kernel deviation: 1.827686749465076
+Gauss deviation: 1.015266124970278
+Trees deviation: 49.806644017641425
+Forest deviation: 31.84637954661123
+MLP deviation: 5.139999427219155
+LOWESS deviation: 2.0172550471402113
+
+LOESS deviation: 0.6449176669971325
+
