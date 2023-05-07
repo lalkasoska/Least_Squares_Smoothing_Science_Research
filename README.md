@@ -1,5 +1,5 @@
 # General Information
-This is my second university project in which I develop software required to conduct a research in a certain methematical field.<br />
+This is my second university project in which I develop software required to conduct a research in a certain methematical field.<br /><br />
 To launch the application execute the "interface.py" file.
 
 # About the application
