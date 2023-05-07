@@ -3,7 +3,8 @@ This is my second university project in which I develop software required to con
 To launch the application execute the "interface.py" file.
 
 # About the application
-The application is developed for researching different aspects of noise smoothing using localization of least squares method. All the code was written in Python 3.10.4 uisng such modules as<br /><br /> -tkinter<br /> -sympy<br /> -matplotlib<br /> -math<br /> -pandas<br /> -numpy<br /><br /> and some others. The application consists of two main blocks: generator and approximator.
+The application is developed for researching different aspects of noise smoothing using localization of least squares method. All the code was written in Python 3.10.4 uisng such modules as<br /><br /> -tkinter<br /> -sympy<br /> -matplotlib<br /> -math<br /> -pandas<br /> -numpy<br /><br /> and some others. <br />
+The application consists of two main blocks: generator and approximator.
 # Generator
 The generator allows you to create sets of points in two-dimensional space based on elementary mathematical functions. The points are saved to a Microsoft Excel table. The generator has a large number of customizable parameters, including the function on the basis of which the points are generated, the interval on which the points will lie, the number of points. The distribution of points on the interval can be regulated - they can be distributed evenly or with a random step. In addition, there is a possibility to generate intervals filled only partially, the percentage of their filling can change dynamically within the specified limits. Noise is applied to the resulting set after generation. It may be a percentage of the original value or an absolute value, may have a uniform or normal distribution with specified parameters. Outliers with adjustable frequency and values can also be added.
 <br /><br />
