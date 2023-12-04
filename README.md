@@ -1,10 +1,17 @@
 # General Information
-This is my second university project in which I develop software required to conduct a research in a certain mathematical field.<br /><br />
-To launch the application execute the "interface.py" file.
+This is my second university project in which I develop software required to conduct a mathematical research on smoothing data noises using modified least squares method.<br /><br />
+To launch the application run the "interface.py" file.
 
 # About the application
-The application is developed for researching different aspects of noise smoothing using localization of least squares method. All the code was written in Python 3.10.4 uisng such modules as<br /><br /> - tkinter<br /> - sympy<br /> - matplotlib<br /> - math<br /> - pandas<br /> - numpy<br /><br /> and some others. <br /><br />
-The application consists of two main blocks: generator and approximator.
+The application is developed for researching different aspects of noise smoothing using least squares method modified to use a window with changing length instead of the entire dataset. All the code was written in Python 3.10.4 uisng such modules as<br /><br /> - tkinter<br /> - sympy<br /> - matplotlib<br /> - math<br /> - pandas<br /> - numpy <br /><br />
+# Smoothing with fixed window length
+![LocalLS_SpeedX2](https://github.com/x-wheel-of-fortune/Least_squares_smoothing_science_research_2022-2023/assets/35616551/570be6a7-549a-42b3-acd5-e5d1db9d7838)
+# Smoothing with dynamic window length
+![Новый_проект_AdobeExpress](https://github.com/x-wheel-of-fortune/Least_squares_smoothing_science_research_2022-2023/assets/35616551/718c3034-fc8d-4302-9244-e209cf9ab2cd)
+
+
+
+### The application consists of two main blocks: generator and approximator.
 # Generator
 The generator allows you to create sets of points in two-dimensional space based on elementary mathematical functions. The points are saved to a Microsoft Excel table. The generator has a large number of customizable parameters, including the function on the basis of which the points are generated, the interval on which the points will lie, the number of points. The distribution of points on the interval can be regulated - they can be distributed evenly or with a random step. In addition, there is a possibility to generate intervals filled only partially, the percentage of their filling can change dynamically within the specified limits. Noise is applied to the resulting set after generation. It may be a percentage of the original value or an absolute value, may have a uniform or normal distribution with specified parameters. Outliers with adjustable frequency and values can also be added.
 <br /><br />
