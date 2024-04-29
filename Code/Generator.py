@@ -141,5 +141,5 @@ def generate(isRandomStep=None, maxFillEmptyChance=None, minFillEmptyChance=None
     df.to_excel(writer)
     worksheet = writer.sheets['Sheet1']
     worksheet.cell(row=1, column=1).value = "f(x)=" + " " + str(func)
-    writer.save()
+    writer._save()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

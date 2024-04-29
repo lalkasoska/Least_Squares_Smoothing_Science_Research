@@ -754,7 +754,7 @@ currentSaveDirectoryEntry = tk.Entry(plotSettingsFrame, textvariable=saveDirecto
                                      width=35)
 currentSaveDirectoryEntry.pack(side="left")
 selectSaveDirectoryButton = tk.Button(plotSettingsFrame, text="Выбрать папку", command=lambda: saveDirectoryVar.set(
-    filedialog.askdirectory(initialdir="SuperComparison\Fix")), relief="ridge", bd=3, height=1, width=12)
+    filedialog.askdirectory(initialdir="")), relief="ridge", bd=3, height=1, width=12)
 selectSaveDirectoryButton.pack(side="left", pady=2, padx=2)
 
 plotSettingsFrame.pack(fill="x", padx=5)
