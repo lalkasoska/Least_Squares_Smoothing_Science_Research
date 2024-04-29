@@ -6,11 +6,10 @@ import numpy as np
 import matplotlib as mpl  # Библиотека для построения графиков
 import matplotlib.pyplot as plt
 from sympy import *
-
-import GeneticDot
-import GeneticVector
-import PyGADVector
-from OtherMethods import *
+import app.approximator.genetic.GeneticDot as GeneticDot
+import app.approximator.genetic.GeneticVector as GeneticVector
+import app.approximator.genetic.PyGADVector as PyGADVector
+from app.approximator.OtherMethods import *
 
 mpl.rcParams['figure.figsize'] = (12, 8)  # Задаём параметры окна с графиками
 mpl.rcParams['axes.grid'] = True

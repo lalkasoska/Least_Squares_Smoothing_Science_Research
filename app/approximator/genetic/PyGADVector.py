@@ -1,5 +1,5 @@
 import pygad
-import Approximator
+from app.approximator import Approximator
 import math
 import random
 
@@ -13,9 +13,9 @@ def genetic(progress, window, populationSize, num_generations, mutation_prob, in
         window.update()
         return \
             -1 * Approximator.smoothSeparate(x=x, y=y, y_real=y_real, yx=yx, yx2=yx2, x2=x2, x3=x3, x4=x4, func_lambd=func_lambd,
-                                    shoulderVector=individual, table=table, smoothEdges=smoothEdges,
-                                    deviationType=deviationType,
-                                    countEdges=countEdges, realtime=realtime, savepath=None)[0]
+                                             shoulderVector=individual, table=table, smoothEdges=smoothEdges,
+                                             deviationType=deviationType,
+                                             countEdges=countEdges, realtime=realtime, savepath=None)[0]
 
     def generate_population(population_size, individual_size, shoulder_limit):
         population = []

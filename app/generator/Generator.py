@@ -137,7 +137,7 @@ def generate(isRandomStep=None, maxFillEmptyChance=None, minFillEmptyChance=None
         plot1.plot(values["x"], values["f(x)"], 'ro', label='Dots with noises', marker='.')
     df = pd.DataFrame(data=values)
     display(df)
-    writer = pd.ExcelWriter('../dots.xlsx')
+    writer = pd.ExcelWriter('../../dots.xlsx')
     df.to_excel(writer)
     worksheet = writer.sheets['Sheet1']
     worksheet.cell(row=1, column=1).value = "f(x)=" + " " + str(func)

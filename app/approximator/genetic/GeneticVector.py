@@ -1,9 +1,5 @@
-import math
-
-import numpy as np
-
-import Approximator
-from Approximator import *
+from app.approximator import Approximator
+from app.approximator.Approximator import *
 
 
 
@@ -71,9 +67,6 @@ def mutation(offspring, mutation_prob, shoulderLimit):
         #         # else:
         #         #     offspring[i][j] = offspring[i][j]-1 if offspring[i][j]-1 > 0 else min(offspring[i][j] + 1,shoulder_limit)
     return offspring
-
-
-import pygad
 
 
 def genetic(progress, window, populationSize, num_generations, mutation_prob, individual_size, x, y, y_real, yx, yx2,

@@ -8,9 +8,9 @@ from tkinter import ttk
 
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 
-import Approximator
-from Approximator import *
-from Generator import *
+from app.approximator import Approximator
+from app.approximator.Approximator import *
+from app.generator.Generator import *
 
 warnings.filterwarnings('ignore')
 
@@ -34,9 +34,9 @@ def loadDots(path):
 
 def loadSettings(path=None):
     if path:
-        shutil.copy(path, "../settings.ini")
+        shutil.copy(path, "settings.ini")
     config = configparser.ConfigParser()
-    config.read("../settings.ini")
+    config.read("settings.ini")
     shoulderVar.set(config["Approximator"]["shoulderLen"])
     iterationsVar.set(config["Approximator"]["maxIterations"])
     accuracyVar.set(config["Approximator"]["accuracy"])
@@ -169,7 +169,7 @@ def loadSettings(path=None):
 
 def saveApproximatorSettings(path=None):
     config = configparser.ConfigParser()
-    config.read("../settings.ini")
+    config.read("settings.ini")
     #     config["Approximator"]["shoulderLen"] = str(shoulderVar.get())
     #     config["Approximator"]["smoothEdges"] = str(smoothVar.get())
     #     config["Approximator"]["showRealFunc"] = str(showRealFuncVar.get())
@@ -222,16 +222,16 @@ def saveApproximatorSettings(path=None):
 
     if path:
         if path[-4:] != ".ini": path += ".ini"
-        shutil.copy("../settings.ini", path)
+        shutil.copy("settings.ini", path)
     else:
-        path = "../settings.ini"
+        path = "settings.ini"
     with open(path, 'w') as configfile:
         config.write(configfile)
 
 
 def saveGeneratorSettings(path=None):
     config = configparser.ConfigParser()
-    config.read("../settings.ini")
+    config.read("settings.ini")
     # config["Generator"]["func"] = str(functionVar.get())
     # config["Generator"]["intervalMin"] = str(intervalMinVar.get())
     # config["Generator"]["intervalMax"] = str(intervalMaxVar.get())
@@ -279,16 +279,16 @@ def saveGeneratorSettings(path=None):
     config["Generator"]["superNoisesPercent"] = str(superNoisePercentVar.get())
     if path:
         if path[-4:] != ".ini": path += ".ini"
-        shutil.copy("../settings.ini", path)
+        shutil.copy("settings.ini", path)
     else:
-        path = "../settings.ini"
+        path = "settings.ini"
     with open(path, 'w') as configfile:
         config.write(configfile)
 
 
 def saveAllSettings(path=None):
     config = configparser.ConfigParser()
-    config.read("../settings.ini")
+    config.read("settings.ini")
     config["Approximator"]["shoulderLen"] = str(shoulderVar.get())
     config["Approximator"]["smoothEdges"] = str(smoothVar.get())
     config["Approximator"]["showRealFunc"] = str(showRealFuncVar.get())
@@ -344,9 +344,9 @@ def saveAllSettings(path=None):
     config["Generator"]["superNoisesPercent"] = str(superNoisePercentVar.get())
     if path:
         if path[-4:] != ".ini": path += ".ini"
-        shutil.copy("../settings.ini", path)
+        shutil.copy("settings.ini", path)
     else:
-        path = "../settings.ini"
+        path = "settings.ini"
 
     with open(path, 'w') as configfile:
         config.write(configfile)
@@ -537,7 +537,7 @@ def on_button_click1():
 
         fig1.savefig(fullSavepath + ".png")
 
-        src_path = "../settings.ini"
+        src_path = "settings.ini"
         dst_path = "../inis/" + savepath + ".ini"
         shutil.copy(src_path, dst_path)
         src_path = "../dots.xlsx"
@@ -546,7 +546,7 @@ def on_button_click1():
         # print('Copied')
 
     config = configparser.ConfigParser()
-    config.read("../settings.ini")
+    config.read("settings.ini")
     if config["Generator"]["mode"] == "1":
         stepfortitle = "Равномерный, " + str("{:.4f}".format(
             (float(config["Generator"]["intervalMax"]) - float(config["Generator"]["intervalMin"])) / int(
